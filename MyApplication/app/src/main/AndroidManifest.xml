@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.covid19.myapplication">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ff.sleep">
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission
+        android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
 
     <application
         android:allowBackup="true"
@@ -9,10 +18,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".inBackground"></activity>
-        <activity android:name=".AboutSleep" />
-        <activity android:name=".Results" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".com.ff.sleep.MySleeps" />
+        <activity android:name=".com.ff.sleep.Profile" />
+        <activity
+            android:name=".com.ff.sleep.ui.login.LoginActivity"
+            android:label="@string/title_activity_login" />
+        <activity android:name=".com.ff.sleep.inBackground" />
+        <activity android:name=".com.ff.sleep.AboutSleep" />
+        <activity android:name=".com.ff.sleep.Results" />
+        <activity android:name=".com.ff.sleep.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
